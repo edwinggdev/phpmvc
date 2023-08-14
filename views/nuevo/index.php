@@ -9,6 +9,7 @@
 <body>
     <?php require 'views/header.php'; ?>
     <h1>Pagina Nuevo</h1>
+    <div><?= $this->mensaje; ?></div>
     <form action="<?= constant('URL') ?>nuevo/registrarAlumno" method="POST">
         <p>
             <label for="matricula">Matricula</label>

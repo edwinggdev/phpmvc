@@ -11,6 +11,7 @@
         <ul>
             <li><a href="<?= constant('URL') ?>main">Inicio</a></li>
             <li><a href="<?= constant('URL') ?>nuevo">Nuevo</a></li>
+            <li><a href="<?= constant('URL') ?>consulta">Consulta</a></li>
         </ul>
     </div>
 </body>

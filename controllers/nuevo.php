@@ -2,8 +2,12 @@
 class Nuevo extends Controller{
     function __construct(){
         parent::__construct();
-        $this->view->render('nuevo/index');
+        $this->view->mensaje = "";
         echo "<p>ctrl NUevo</p>";
+    }
+
+    function render(){
+        $this->view->render('nuevo/index');
     }
 
     function saludo(){
@@ -14,9 +18,15 @@ class Nuevo extends Controller{
         $matricula = $_POST['matricula'];
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
-        echo "alumno Creado";
-        $this->model->insert(['matricula'=>$matricula, 'nombre'=>$nombre, 'apellido'=>$apellido]);
         
+        if($this->model->insert(['matricula'=>$matricula, 'nombre'=>$nombre, 'apellido'=>$apellido])){
+            $mensaje = "Alumno Creado";
+        }else{
+            $mensaje = " Alumno ya Existe";
+        }
+
+        $this->view->mensaje = $mensaje;
+        $this->render();
     }
 }
 ?>
