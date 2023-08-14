@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php require 'views/header.php'; ?>
-    <h1>Pagina Main</h1>
+    <h1>Pagina Consulta</h1>
     <?php require 'views/footer.php'; ?>
 </body>
 </html>

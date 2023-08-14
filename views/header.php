@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="public/css/main.css">
 </head>
 <body>
-    <?php require 'views/header.php'; ?>
-    <h1>Pagina Main</h1>
-    <?php require 'views/footer.php'; ?>
+    <div id="header">
+        <ul>
+            <li><a href="<?= constant('URL') ?>main">Inicio</a></li>
+            <li><a href="<?= constant('URL') ?>nuevo">Nuevo</a></li>
+        </ul>
+    </div>
 </body>
 </html>
