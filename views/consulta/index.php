@@ -31,8 +31,8 @@
                     <td><?= $alumno->matricula ?></td>
                     <td><?= $alumno->nombre ?></td>
                     <td><?= $alumno->apellido ?></td>
-                    <td><a href="#">Editar</a></td>
-                    <td><a href="#">Eliminar</a></td>
+                    <td><a href="<?= constant('URL').'consulta/verAlumno/'. $alumno->id ?>">Editar</a></td>
+                    <td><a href="<?= constant('URL').'consulta/eliminarAlumno/'. $alumno->matricula ?>">Eliminar</a></td>
                 </tr>
                 <?php } ?>
             </tbody>
